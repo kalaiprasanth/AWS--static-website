@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!-- Designed by SKP -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Hosting a Static Web page</title>
+    <style>
+        body {
+            width: 100%;
+            height: 100vh;
+            background-color: #FFFFFF;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            text-align: left;
+           
+        }
+        div{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        p{
+            padding-left: 10%;
+        }
+        h1 {
+            font-size: 300%;
+            color: #2DDDF2;
+        }
+
+        h2 {
+            font-size: 200%;
+        }
+        .name{
+            color: #936FFA;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>Congratulations!!! Hosted a static web page</h1>
+        <h2>Welcome to SKP WORLD...| <b class="name">Kalaiprasanth</b></h2>
+        <h3>This static web page has been hosted by using AWS servvices EC2, S3 and IAM</h3> <br>
+    </div>
+        <p>Procedure to Host a Web Page in AWS</p>
+        <p>Step-1: Created an S3 Bucket</p>
+        <p>Step-2: Upload files like index.html, style.css etc., <b style="color: red;">After uploading files copy the S3 Bucket location.</b></p>
+        <p>Step-3: Hereafter, create a role in IAM for accessing S3 Bucket in Instance</p>
+        <p>Step-4: The role created for S3 full access</p>
+        <p>Step-5: Then, create an EC2 Instance with their requirements and user data. If you want to know about the user data you can check on my <a href="https://github.com/kalaiprasanth/AWS--static-website.git"> GitHub Repo</a></p>
+        <p>Step-6: Connect the instance using SSH connectivity or other methods.</p>
+        <p>Step-7: Check the S3 buckets in usign the command "aws s3 ls" <b style="color: red;">!If your not attached the IAM S3 role on instance the command will not be working.</b></p>
+        <p>Step-1: Then, change the Directory to <b style="color: red;">cd /var/www/html/</b></p>
+        <p>Step-1: Copy the files from S3 Bucket to the current location using the command <b style="color: red;">sudo aws s3 cp --recursive s3bucketlocation .</b></p>
+        <p>Step-1: After the copying the files from S3 to the location go to the EC2 Instance and copy the Local IP and paste it in new tab </p>
+        <marquee><p><b>That's it now it works!!!</b></p></marquee>
+</body>
